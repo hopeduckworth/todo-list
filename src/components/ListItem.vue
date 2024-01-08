@@ -13,7 +13,7 @@ defineProps<ListItemProps>();
 
 <template>
   <div class="container">
-    <p class="large-text">
+    <p :class="[{ 'zero-margin': !subtitle }, 'large-text']">
       {{ title }}
     </p>
 
@@ -39,6 +39,10 @@ p.small-text {
 p.large-text {
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
+}
+
+p.zero-margin {
+  margin-bottom: 0;
 }
 
 .container {
