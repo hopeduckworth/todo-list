@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 import UserAvatar from "./UserAvatar.vue";
+import StandardButton from "./StandardButton.vue";
 
 type TopNavBarProps = {
   /** this prop is for whether a user is logged in */
@@ -16,6 +17,12 @@ defineProps<TopNavBarProps>();
   <div class="header-container">
     <h1>To-do Lists</h1>
     <div class="user-container">
+      <div class="button-container">
+        <StandardButton
+          title="testbutton"
+          @on-click="() => console.log('you clicked me')"
+        />
+      </div>
       <UserAvatar avatar-size="medium" avatar-url="test" />
     </div>
   </div>
@@ -35,5 +42,9 @@ defineProps<TopNavBarProps>();
 .user-container {
   display: flex;
   align-items: center;
+}
+
+.button-container {
+  margin-right: 2rem;
 }
 </style>
