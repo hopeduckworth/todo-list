@@ -26,7 +26,7 @@ defineProps<UserAvatarProps>();
 
 <style scoped>
 .avatar-container {
-  background-color: #f90909;
+  background-color: darkorchid;
   border-radius: 50%;
 }
 

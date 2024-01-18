@@ -3,8 +3,17 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <!-- <HelloWorld msg="This is a test message" /> -->
-    <ListMain title="Test Title" :items="5" />
-    <ListItem title="Test List" subtitle="test subtitle" />
+    <ListMain
+      title="Test Title"
+      subtitle="test main subtitle"
+      @onAdd="() => console.log('testing add button')"
+      @onTrash="() => console.log('testing trash')"
+    />
+    <ListItem
+      title="Test List"
+      subtitle="test subtitle"
+      @onComplete="() => console.log('this is done')"
+    />
     <ListItem title="Test List" />
   </div>
 </template>
