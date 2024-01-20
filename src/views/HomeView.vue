@@ -1,41 +1,14 @@
 <template>
-  <TopNavBar :isAuthenticated="true" avatarUrl="testavatar" />
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <!-- <HelloWorld msg="This is a test message" /> -->
-    <ListMain
-      title="Test Title"
-      subtitle="test main subtitle"
-      @onAdd="() => console.log('testing add button')"
-      @onTrash="() => console.log('testing trash')"
-    />
-    <ListItem
-      title="Test List"
-      subtitle="test subtitle"
-      @onComplete="() => console.log('this is done')"
-    />
-    <ListItem title="Test List" />
-  </div>
+  <div class="home"></div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-// import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+<script setup lang="ts">
+import { ref } from "vue";
 import ListMain from "@/components/ListMain.vue";
 import ListItem from "@/components/ListItem.vue";
-import TopNavBar from "@/components/TopNavBar.vue";
+import { dummyData as dummyDataObj } from "../data/dummyData";
 
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    // HelloWorld,
-    ListMain,
-    ListItem,
-    TopNavBar,
-  },
-});
+const dummyData = ref(dummyDataObj);
 </script>
 
-<!-- <div id="container">
-    <img src="img.png">
-</div> -->
+<style scoped></style>

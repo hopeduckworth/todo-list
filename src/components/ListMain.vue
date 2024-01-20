@@ -68,7 +68,6 @@ p.zero-margin {
   padding: 1.5rem 2rem;
   flex-direction: row;
   display: flex;
-  align-items: flex-start;
   max-width: 600px;
   border-radius: 0.5rem;
   border: 1px solid #fff;

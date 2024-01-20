@@ -1,8 +1,9 @@
+<script setup lang="ts">
+import TopNavBar from "./components/TopNavBar.vue";
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <TopNavBar :isAuthenticated="true" avatarUrl="testavatar" />
   <router-view />
 </template>
 
